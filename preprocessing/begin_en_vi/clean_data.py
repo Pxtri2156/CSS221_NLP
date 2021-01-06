@@ -4,8 +4,8 @@ import argparse
 from pickle import dump
 from unicodedata import normalize
 from numpy import array
-
-
+import sys
+sys.path.append('./')
 from util.load_and_save import save_data, load_data, load_doc 
 
 
@@ -16,7 +16,7 @@ def to_pairs(doc):
 	return pairs
 
 # clean a list of lines
-def clean_pairs(lines):
+def to_clean_pairs(lines):
   cleaned = list()
   # prepare regex for char filtering
   re_print = re.compile('[^%s]' % re.escape(string.printable))
@@ -54,11 +54,11 @@ def main(args):
     pairs = to_pairs(doc)
     print('pairs: ', pairs[:10])
     # clean sentences
-    clean_pairs = clean_pairs(pairs)
+    clean_pairs = to_clean_pairs(pairs)
     print('clean data: ', clean_pairs[:10])
     clean_pairs = clean_pairs[:,:2]
     # save clean pairs to file
-    save_clean_data(clean_pairs , args.output_path)
+    save_data(clean_pairs , args.output_path)
     # spot check
     for i in range(1000):
         print('[%s] => [%s]' % (clean_pairs[i,0], clean_pairs[i,1]))
