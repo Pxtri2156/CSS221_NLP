@@ -3,13 +3,12 @@ from model import define_model
 def main():
     # Load data -- sentence pairs 
 
-    # Encode
+    # Tokenization 
 
-    # Predict
+    # Train 
     ## Load model
-    ## Predicting
-    ## Decode 
-    
+    ## Training 
+
     # Save model
     pass
 
