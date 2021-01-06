@@ -18,6 +18,7 @@ def main(args):
     # reduce dataset size
     dataset = raw_dataset
     # random shuffle
+    
     shuffle(dataset)
     # split into train/test
     len_split = int(args.ratio * int(dataset.shape[0]))
