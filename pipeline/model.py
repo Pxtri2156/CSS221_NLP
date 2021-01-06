@@ -24,12 +24,12 @@ def define_model(src_vocab, tar_vocab, src_timesteps, tar_timesteps, n_units):
 	return model
 
 def main(args):
-    # # define model
-    # model = define_model(eng_vocab_size, vi_vocab_size, eng_length, vi_length, 256)
-    # model.compile(optimizer='adam', loss='categorical_crossentropy')
-    # # summarize defined model
-    # print(model.summary())
-    # plot_model(model, to_file='model.png', show_shapes=True)
+    # define model
+    model = define_model(eng_vocab_size, vi_vocab_size, eng_length, vi_length, 256)
+    model.compile(optimizer='adam', loss='categorical_crossentropy')
+    # summarize defined model
+    print(model.summary())
+    plot_model(model, to_file='model.png', show_shapes=True)
 
     # fit model
     print("model_path: ", filename)
