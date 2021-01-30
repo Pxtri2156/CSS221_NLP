@@ -1,6 +1,5 @@
 # CSS221_NLP
-This is final project of nature language processing 
-
-# Cấu trúc của code gồm folder chính: 
-+ Seq2Seq: folder chứa code của mô hinh sequence to sequence.
+Đây là source code của đồ án cuối kì môn xử lí ngôn ngữ tự nhiên.
+# Cấu trúc của code gồm: 
++ Các phần folder code còn lại phục vụ cho mô hình sequence to sequence
 + Transformer: folder chứa notebook của để chạy mô hình transformer. 
